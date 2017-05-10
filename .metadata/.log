@@ -40,3 +40,6 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.launching 4 150 2017-05-10 14:11:33.076
+!MESSAGE The archive: C:/Users/bruno.hspadoveze/Desktop/lib/twitter4j-async-4.0.4.jar which is referenced by the classpath, does not exist.
