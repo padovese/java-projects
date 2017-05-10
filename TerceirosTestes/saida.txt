@@ -1,0 +1,3 @@
+Estou lendo do arquivo.
+Que pode ter várias linhas!
+padovese
