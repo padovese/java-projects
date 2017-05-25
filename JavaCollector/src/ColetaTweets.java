@@ -3,6 +3,8 @@ import java.io.PrintStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 
 import twitter4j.Query;
 import twitter4j.QueryResult;
@@ -25,21 +27,33 @@ public class ColetaTweets {
 	    TwitterFactory factory = new TwitterFactory(configuration);
 	    Twitter twitter = factory.getInstance();
 	    
+		List<String> parametros = new LinkedList<String>();
+		parametros.add("lula");
+		parametros.add("madrid");
+	    
+	    for (int i = 0; i < parametros.size(); i++){
+	    
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH-mm-ss");
 		Date date = new Date();		
 	    
 		PrintStream ps = new PrintStream("tweets " + dateFormat.format(date) + ".txt");
+		
+
 	    
+		
+		
+		
 	    //Query builder from tweets of the whole twitter
-	      Query query = new Query("madrid");
-	      query.setCount(100);
+	      Query query = new Query(parametros.get(i));
+	      query.setCount(5000);
 	      //query.setSince("2015-05-25");
 	      QueryResult result = twitter.search(query);
 	      for (Status status : result.getTweets()) {
-	          System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
+	          //System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
 	          ps.println("@" + status.getUser().getScreenName() + ":" + status.getText());
 	      }
 	      
 	      ps.close();
+		}
 	}
 }

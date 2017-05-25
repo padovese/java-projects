@@ -3,6 +3,15 @@
 	<item value="C:\Users\bruno.hspadoveze\Desktop\Java\twitter4j-4.0.4\lib" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="C:\Users\bruno.hspadoveze\Desktop\Java\java-projects\TerceirosTestes" key="org.eclipse.jdt.ui.last.external.project"/>
 	<item value="480,510" key="UserLibraryLoadSaveDialog.size"/>
+	<section name="RefactoringWizard.preview">
+		<item value="600" key="width"/>
+		<item value="400" key="height"/>
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item value="false" key="updateSimilarElements"/>
+		<item value="1" key="updateSimilarElementsMatchStrategy"/>
+		<item value="false" key="updateTextualMatches"/>
+	</section>
 	<section name="FatJarPackageWizard">
 		<item value="C:\Users\bruno.hspadoveze\Desktop\Java\java-projects" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
 		<item value="ColetaTweets - JavaCollector" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>

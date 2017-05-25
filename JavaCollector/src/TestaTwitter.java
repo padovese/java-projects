@@ -36,7 +36,7 @@ public class TestaTwitter {
 //      }
 
     //Realiza consulta no twitter geral
-      Query query = new Query("juventus");
+      Query query = new Query("VALDIR COLATTO");
       query.setCount(100);
       //query.setSince("2015-05-25");
       QueryResult result = twitter.search(query);
