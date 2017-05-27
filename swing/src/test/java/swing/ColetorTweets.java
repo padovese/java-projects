@@ -18,7 +18,7 @@ import twitter4j.conf.Configuration;
 import twitter4j.conf.ConfigurationBuilder;
 import twitter4j.json.DataObjectFactory;
 
-public class test {
+public class ColetorTweets {
 	public static void main(String[] args) throws FileNotFoundException, TwitterException {
 		Scanner sc = new Scanner(new FileInputStream("parametros.txt"));
 
