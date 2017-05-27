@@ -13,15 +13,19 @@
 		<item value="false" key="updateTextualMatches"/>
 	</section>
 	<section name="FatJarPackageWizard">
-		<item value="C:\Users\bruno.hspadoveze\Desktop\Java\java-projects" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
-		<item value="ColetaTweets - JavaCollector" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
-		<item value="C:\Users\bruno.hspadoveze\Desktop\executavel.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
+		<item value="C:\Users\bruno.hspadoveze\Desktop\Java\java-projects.xml" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
+		<item value="test - swing" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
+		<item value="C:\Users\Home\Desktop\Coletor de Tweets\Coletor de Tweets\executavel.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
 		<item value="false" key="FatJarPackageWizardPage.ANTSCRIPT_SAVE"/>
 		<item value="1" key="FatJarPackageWizardPage.LIBRARY_HANDLING"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="C:\Users\Home\Desktop\Coletor de Tweets\Coletor de Tweets\executavel.jar"/>
+			<item value="C:\Users\Home\Desktop\Coletor de Tweets\executavel.jar"/>
 			<item value="C:\Users\bruno.hspadoveze\Desktop\executavel.jar"/>
 		</list>
 		<list key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION_HISTORY">
+			<item value="C:\Users\bruno.hspadoveze\Desktop\Java\java-projects.xml"/>
+			<item value="C:\Users\bruno.hspadoveze\Desktop\Java\java-projects"/>
 			<item value=".xml"/>
 		</list>
 	</section>

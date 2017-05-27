@@ -8,7 +8,7 @@ public class Swingtest extends JFrame implements ActionListener
 {
     JTextField txtdata;
     JButton calbtn = new JButton("Coletar");
-    JLabel texto = new JLabel("Digite seu parâmetro de coleta:");
+    JLabel texto = new JLabel("Digite seu parï¿½metro de coleta:");
 
     public Swingtest()
     {
@@ -33,7 +33,7 @@ public class Swingtest extends JFrame implements ActionListener
     {
         if (e.getSource() == calbtn) {
             String data = txtdata.getText(); //perform your operation
-            System.out.println(data);
+            //System.out.println(data);
         }
     }
 

@@ -27,7 +27,7 @@ public class Coletor extends JFrame implements ActionListener
 {
     JTextField txtdata;
     JButton calbtn = new JButton("Coletar");
-    JLabel texto = new JLabel("Digite seu parâmetro de coleta:");
+    JLabel texto = new JLabel("Digite seu parï¿½metro de coleta:");
 
     public Coletor()
     {
@@ -51,63 +51,47 @@ public class Coletor extends JFrame implements ActionListener
     public void actionPerformed(ActionEvent e)
     {
         if (e.getSource() == calbtn) {
-            String dataa = txtdata.getText(); //perform your operation
-            //System.out.println(dataa);
-            //Inicio tweet
-			ConfigurationBuilder builder = new ConfigurationBuilder();
-			builder.setJSONStoreEnabled(true);
-			builder.setOAuthConsumerKey("pPzh0kqMWblUFxkLqVR1p0dFr");
-			builder.setOAuthConsumerSecret("yUxFkxuZ8JLH8cW2H6JxNGhGfzOujg3zC9LpkAeQdJyH05wbAw");
-			builder.setOAuthAccessToken("1345533410-lmyD5pPmA3EXOZHkggBXvIB7nypcPLP8uMrP4Pt");
-			builder.setOAuthAccessTokenSecret("963uFbR5z6FAXFELrkglkYctKCooTUk6TGHNHeEWzsJXJ");
-			Configuration configuration = builder.build();
-			TwitterFactory factory = new TwitterFactory(configuration);
-			Twitter twitter = factory.getInstance();
-		
-			DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss");
-			Date date = new Date();	
-			
-			PrintStream ps;
-			try {
-				ps = new PrintStream(dataa + dateFormat.format(date) + ".txt");
-
-
-
-    ConfigurationBuilder cb = new ConfigurationBuilder();
-    cb.setJSONStoreEnabled(true);
-
-    Query query = new Query(dataa);
-    query.setCount(100);
-    QueryResult result;
-	try {
-		result = twitter.search(query);
-
-    for (Status tweet : result.getTweets()) {
-        String json = DataObjectFactory.getRawJSON(tweet);
-        DBObject doc = (DBObject)JSON.parse(json);
-        ps.println(json);
-
-
-    }
-	} catch (TwitterException e1) {
-		// TODO Auto-generated catch block
-		e1.printStackTrace();
-	}
-      ps.close();
-            //Fim
-      
-			} catch (FileNotFoundException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+            String data = txtdata.getText(); //perform your operation
+            System.out.println(data);
+	
         }
     }
 
-    public static void main(String args[])
+    public static void main(String args[]) throws FileNotFoundException, TwitterException
     {
         Swingtest g = new Swingtest();
-        //g.setLocation(10, 10);
-        //g.setSize(300, 300);
         g.setVisible(true);
+    }
+    
+    public void geraTxt(String data) throws FileNotFoundException, TwitterException{
+        ConfigurationBuilder builder = new ConfigurationBuilder();
+		builder.setJSONStoreEnabled(true);
+		builder.setOAuthConsumerKey("pPzh0kqMWblUFxkLqVR1p0dFr");
+		builder.setOAuthConsumerSecret("yUxFkxuZ8JLH8cW2H6JxNGhGfzOujg3zC9LpkAeQdJyH05wbAw");
+		builder.setOAuthAccessToken("1345533410-lmyD5pPmA3EXOZHkggBXvIB7nypcPLP8uMrP4Pt");
+		builder.setOAuthAccessTokenSecret("963uFbR5z6FAXFELrkglkYctKCooTUk6TGHNHeEWzsJXJ");
+		Configuration configuration = builder.build();
+		TwitterFactory factory = new TwitterFactory(configuration);
+		Twitter twitter = factory.getInstance();
+		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss");
+		Date date = new Date();	
+
+		PrintStream ps = new PrintStream(data + dateFormat.format(date) + ".txt");
+
+		ConfigurationBuilder cb = new ConfigurationBuilder();
+		cb.setJSONStoreEnabled(true);
+		
+	    Query query = new Query(data);
+	    query.setCount(100);
+	    QueryResult result;
+
+		result = twitter.search(query);
+
+	    for (Status tweet : result.getTweets()) {
+	        String json = DataObjectFactory.getRawJSON(tweet);
+	        ps.println(json);
+	        System.out.println(json);
+	    }
+	    ps.close();
     }
 }
