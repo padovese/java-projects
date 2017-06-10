@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import modelo.Categoria;
 import modelo.Produto;
 
 public class ProdutosDAO {
@@ -37,19 +38,34 @@ public class ProdutosDAO {
 			
 			try(PreparedStatement stmt = conn.prepareStatement(sql)){
 				stmt.execute();
-				
-				try(ResultSet rs = stmt.getResultSet()){
-					while(rs.next()){
-						int id = rs.getInt("id");
-						String nome = rs.getString("nome");
-						String descricao = rs.getString("descricao");
-						Produto produto = new Produto(nome, descricao);
-						produto.setId(id);
-						produtos.add(produto);
-					}
-				}
+				transformaResultadoEmProdutos(produtos, stmt);
 			}
 			return produtos;
+		}
+
+		public Object busca(Categoria categoria) throws SQLException {
+			List<Produto> produtos = new ArrayList<>();
+			String sql = "select * from produtos where id = ?";
+			
+			try(PreparedStatement stmt = conn.prepareStatement(sql)){
+				stmt.setInt(1, categoria.getId());
+				stmt.execute();
+				transformaResultadoEmProdutos(produtos, stmt);
+			}
+			return produtos;
+		}
+		
+		private void transformaResultadoEmProdutos(List<Produto> produtos, PreparedStatement stmt) throws SQLException {
+			try(ResultSet rs = stmt.getResultSet()){
+				while(rs.next()){
+					int id = rs.getInt("id");
+					String nome = rs.getString("nome");
+					String descricao = rs.getString("descricao");
+					Produto produto = new Produto(nome, descricao);
+					produto.setId(id);
+					produtos.add(produto);
+				}
+			}
 		}
 		
 	}
