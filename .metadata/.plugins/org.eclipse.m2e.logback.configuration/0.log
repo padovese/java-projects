@@ -3102,3 +3102,52 @@
 2017-06-09 11:31:02,620 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2017-06-09 11:31:02,620 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-06-09 11:31:02,621 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-06-16 18:18:29,963 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-16 18:18:47,878 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2017-06-16 18:19:19,425 [Worker-9] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Exercises:Basics:0.0.1-SNAPSHOT @ C:\Users\Home\Desktop\java\java-projects\Basics\pom.xml.
+2017-06-16 18:19:22,089 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-16 18:19:22,091 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Home\Desktop\java\java-projects\Basics\src\main\resources
+2017-06-16 18:19:22,146 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-16 18:19:22,147 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Home\Desktop\java\java-projects\Basics\src\test\resources
+2017-06-16 18:19:23,378 [Worker-9] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: loja-virtual:loja:0.0.1-SNAPSHOT @ C:\Users\Home\Desktop\java\java-projects\loja\pom.xml.
+2017-06-16 18:19:23,402 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.oracle:ojdbc6:jar:11.2.0.3 is missing, no dependency information available
+2017-06-16 18:19:23,810 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-16 18:19:23,811 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Home\Desktop\java\java-projects\loja\src\main\resources
+2017-06-16 18:19:23,815 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-16 18:19:23,815 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Home\Desktop\java\java-projects\loja\src\test\resources
+2017-06-16 18:19:24,214 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: swing:swing:0.0.1-SNAPSHOT @ C:\Users\Home\Desktop\java\java-projects\swing\pom.xml.
+2017-06-16 18:19:25,115 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-16 18:19:25,115 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Home\Desktop\java\java-projects\swing\src\main\resources
+2017-06-16 18:19:25,118 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-16 18:19:25,118 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Home\Desktop\java\java-projects\swing\src\test\resources
+2017-06-16 18:19:35,938 [Worker-11] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2017-06-16 18:19:36,548 [Worker-11] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Exercises:Basics:0.0.1-SNAPSHOT @ C:\Users\Home\Desktop\java\java-projects\Basics\pom.xml.
+2017-06-16 18:19:36,589 [Worker-11] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: loja-virtual:loja:0.0.1-SNAPSHOT @ C:\Users\Home\Desktop\java\java-projects\loja\pom.xml.
+2017-06-16 18:19:36,591 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.oracle:ojdbc6:jar:11.2.0.3 is missing, no dependency information available
+2017-06-16 18:19:36,636 [Worker-11] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: swing:swing:0.0.1-SNAPSHOT @ C:\Users\Home\Desktop\java\java-projects\swing\pom.xml.
+2017-06-16 18:19:36,900 [Worker-11] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Basics/src/main/java
+2017-06-16 18:19:36,901 [Worker-11] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Basics/src/test/java
+2017-06-16 18:19:37,007 [Worker-11] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /loja/src/main/java
+2017-06-16 18:19:37,008 [Worker-11] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /loja/src/test/java
+2017-06-16 18:19:37,041 [Worker-11] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /swing/src/main/java
+2017-06-16 18:19:37,042 [Worker-11] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /swing/src/test/java
+2017-06-16 18:19:37,185 [Worker-11] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2017-06-16 18:19:37,460 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-16 18:19:37,463 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Home\Desktop\java\java-projects\Basics\src\main\resources
+2017-06-16 18:19:37,467 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-16 18:19:37,468 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Home\Desktop\java\java-projects\Basics\src\test\resources
+2017-06-16 18:19:37,481 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.oracle:ojdbc6:jar:11.2.0.3 is missing, no dependency information available
+2017-06-16 18:19:37,487 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-16 18:19:37,488 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Home\Desktop\java\java-projects\loja\src\main\resources
+2017-06-16 18:19:37,490 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-16 18:19:37,490 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Home\Desktop\java\java-projects\loja\src\test\resources
+2017-06-16 18:19:37,768 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-16 18:19:37,769 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Home\Desktop\java\java-projects\swing\src\main\resources
+2017-06-16 18:19:37,771 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-16 18:19:37,771 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Home\Desktop\java\java-projects\swing\src\test\resources
+2017-06-16 18:20:35,416 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-16 18:20:35,417 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Home\Desktop\java\java-projects\Basics\src\main\resources
+2017-06-16 18:20:35,419 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-16 18:20:35,421 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Home\Desktop\java\java-projects\Basics\src\test\resources
+2017-06-20 20:18:47,083 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-21 19:02:48,076 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
