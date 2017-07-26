@@ -1,4 +1,8 @@
 package Guide;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 //The calc is 2¹. 1 means the number of bits.
 //boolean true or false			//Total of 1 bit
 //byte 	-128 to 127 			//Total of 8 bits
@@ -10,9 +14,23 @@ package Guide;
 //char	 ex: 'a'				//Total of 16 bits
 
 public class Tester {
+	
 	public static void main(String[] args) {
-		int _m$illion = 5_123_123;
-		System.out.println(_m$3illion);
+		ArrayList<String> lista = new ArrayList<>();
+		
+		lista.add("Um");
+		lista.add("Dois");
+		lista.add("Um");
+		
+		System.out.println(lista);
+		
+		System.out.println(lista.remove("Um"));
+		
+		System.out.println(lista);
+		
+		lista.clear();
+		System.out.println(lista.isEmpty());
+		System.out.println(lista.size());
 	}
 }
 
