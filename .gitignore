@@ -48,3 +48,6 @@ Temporary Items
 
 #Java metadata
 .metadata
+
+# ignore an entire directory
+/doc/
