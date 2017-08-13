@@ -1,7 +1,6 @@
 package Guide;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 //The calc is 2¹. 1 means the number of bits.
 //boolean true or false			//Total of 1 bit
