@@ -48,6 +48,7 @@ Temporary Items
 
 #Java metadata
 .metadata
+.recommenders
 
 # ignore an entire directory
 /doc/
