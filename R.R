@@ -27,6 +27,21 @@ sqldf("select avg(d.co_escolaridade_docente)
       where d.co_ies = i.co_ies
       and   no_regiao_ies = 'Nordeste'")
 
+
+--Exercicios:
+sqldf("select d.co_escolaridade_docente, count(d.co_escolaridade_docente) 
+      from DM_DOCENTE d, DM_IES i 
+      where d.co_ies = i.co_ies
+      and   no_regiao_ies = 'Nordeste'
+      group by d.co_escolaridade_docente")
+
+
+sqldf("select d.co_escolaridade_docente, count(d.co_escolaridade_docente) 
+      from DM_DOCENTE d, DM_IES i 
+      where d.co_ies = i.co_ies
+      and   no_regiao_ies = 'Sudeste'
+      group by d.co_escolaridade_docente")
+
 sqldf("select no_regiao_ies, count(no_regiao_ies) from DM_IES group by no_regiao_ies")
 
 
