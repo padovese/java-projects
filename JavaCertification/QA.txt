@@ -1,0 +1,10 @@
+Questions Academy LearnProgramming Java Certification
+
+1 - ABE		ok
+2 - BDE		ok
+3 - D		ok
+4 - E		ok
+5 - D		not ok (both classes are in the same package, doesnt need to import)
+6 - G		ok
+7 - BCD		ok
+8 - BCE		not ok (Java has pointers to specific locations in memory) FALSE

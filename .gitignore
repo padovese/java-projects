@@ -50,6 +50,7 @@ Temporary Items
 .metadata
 .recommenders
 *.xml
+*.iml
 
 # ignore an entire directory
 /doc/
