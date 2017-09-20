@@ -12,5 +12,20 @@ public class EqualityOperators {
         boolean z = (y = true) && (x = false);
 
         System.out.println("x= " + x + ", y= " + y + ", z= " + z);
+
+        byte q = 5;
+        byte w = 10;
+        float e = q + w;
+        System.out.println(e);
+
+
+
+
     }
+    public void a(){
+        System.out.println(word);
+    }
+
+    static String word = "done";
+
 }

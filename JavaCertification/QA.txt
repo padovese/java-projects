@@ -8,3 +8,12 @@ Questions Academy LearnProgramming Java Certification
 6 - G		ok
 7 - BCD		ok
 8 - BCE		not ok (Java has pointers to specific locations in memory) FALSE
+
+
+
+1 - AD 		ok
+2 - ABD 	ok
+3 - BCDF	ok
+4 - B  		ok
+5 - A 		ok
+6 - C 		ok
