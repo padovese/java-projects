@@ -17,3 +17,14 @@ Questions Academy LearnProgramming Java Certification
 4 - B  		ok
 5 - A 		ok
 6 - C 		ok
+
+
+
+1 - D 		ok
+2 - EF		not ok (only the last else wasn't ok, i answered too fast)
+3 - D 		ok
+4 - F 		ok
+5 - A 		ok
+6 - E 		ok
+7 - D 		ok
+8 - B 		ok

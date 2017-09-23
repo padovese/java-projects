@@ -30,5 +30,15 @@ public class CharacterArithmetic {
         System.out.println(newChar);
         System.out.println(b);
         System.out.println(c);
+
+        int p = 10;
+        if (p > 9){
+            System.out.println("a");
+            System.out.println("b");
+        } else if (p < 9) System.out.println("c");
+        else {
+            System.out.println("d");
+            System.out.println("e");
+        }
     }
 }
