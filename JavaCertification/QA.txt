@@ -28,3 +28,16 @@ Questions Academy LearnProgramming Java Certification
 6 - E 		ok
 7 - D 		ok
 8 - B 		ok
+
+
+
+1 - BD 		not ok (you can't assign int to a String variable)
+2 - ACDE 	not ok (pay attention when comparing Strings using == )
+3 - BCE		ok
+4 - B 		ok
+5 - F 		ok
+6 - F 		ok
+7 - BDE 	ok
+8 - G		not ok (substring can have only 1 parameter, it will return all th string starting by the parameter position)
+9 - E  		ok
+10 - A 		ok
