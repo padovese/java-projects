@@ -44,5 +44,17 @@ public class ForLoop {
                 System.out.println(b + " * " + m + " = " + (b * m));
         System.out.println("hello");
 
+        int[] p = new int[]{1, 2, 3};
+        int a = 120;
+        switch (a) {
+            default:
+                System.out.println(1);
+            case 20:
+                for(int x : p) System.out.println(x);
+            case 10+11:
+                System.out.println(2);
+                break;
+        }
+
     }
 }
