@@ -41,3 +41,16 @@ Questions Academy LearnProgramming Java Certification
 8 - G		not ok (substring can have only 1 parameter, it will return all th string starting by the parameter position)
 9 - E  		ok
 10 - A 		ok
+
+
+
+1 - B 		ok
+2 - ACDE    not ok (only the first position of the array need to be inicializaed, for single or multidimensional arrays)
+3 - C 		ok
+4 - D 		ok
+5 - E 		ok  	(ps: char can be assigned to int only in variables, not in arrays)
+6 - AD 		ok
+7 - C 		ok
+8 - F 		not ok	(brean and continue can be inside a if statement only if it is inside a loop statement)
+8 - CD		not ok (loops can be used within a switch statement)
+9 - A 		not ok (you can't define two different labels in switch case statement. Even if is explicict like 2 and 2, or 2 and 1+1, compilation error)
