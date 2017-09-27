@@ -54,3 +54,16 @@ Questions Academy LearnProgramming Java Certification
 8 - F 		not ok	(brean and continue can be inside a if statement only if it is inside a loop statement)
 8 - CD		not ok (loops can be used within a switch statement)
 9 - A 		not ok (you can't define two different labels in switch case statement. Even if is explicict like 2 and 2, or 2 and 1+1, compilation error)
+
+
+1 - G 		not ok (you can create an ArrayList by no spicfy <>. It add any type) (ArrayList only have size() method)	
+2 - AC 		not ok (Array and ArrayList are ordered because they have index)
+3 - C  		not ok (Need to undersant better equality of arrays and arrayList)
+4 - D 		ok
+5 - C 		ok
+6 - A  		ok
+7 - A 		not ok (to convert an array to a list you need to use Arrays.asList(myArray))
+8 - B 		ok
+9 - A 		not ok (you can store null on Integer field/array, but if you'll print it will throw nullPointerException)
+					Integer.parseInt recieve a String and return an int. Integer.valueOf recieve a String or int and return an Integer)
+10 - ADEHK 	ok
