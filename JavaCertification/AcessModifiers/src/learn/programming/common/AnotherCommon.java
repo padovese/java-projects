@@ -7,5 +7,10 @@ public class AnotherCommon {
         c.protectedPrint();
         c.defaultPrint();
 //        c.privatePront();
+
+        System.out.println(c.var1);
+        System.out.println(c.var2);
+        System.out.println(c.var3);
+//        System.out.println(c.var4);
     }
 }
