@@ -1,6 +1,5 @@
 package academy.learnprogramming.main;
 
-import academy.learnprogramming.Dog;
 import academy.learnprogramming.Husky;
 
 public class Main {
@@ -10,11 +9,13 @@ public class Main {
         h.printDetails();
         h.eat();
         System.out.println(h.getAverageWeight());
+        h.setName("Rex");
+        h.setAge(6);
 
-        Dog d = new Dog(0);
-        d.setName("Rex");
-        d.printDetails();
-        d.eat();
-        System.out.println(d.getAverageWeight());
+//        Dog d = new Dog(0);
+//        d.setName("Rex");
+//        d.printDetails();
+//        d.eat();
+//        System.out.println(d.getAverageWeight());
     }
 }

@@ -1,9 +1,12 @@
 package academy.learnprogramming;
 
-public class Animal extends Object{
+public abstract class Animal extends Object{
 
     private int age;
     private String name;
+
+    public Animal(){
+    }
 
     public Animal(int age){
         super();
@@ -38,4 +41,6 @@ public class Animal extends Object{
     public void printDetails(){
         System.out.println("name= "+ name + " age= " + age);
     }
+
+    public abstract void getWeight();     //abstract method doesn't have body
 }
