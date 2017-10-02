@@ -11,6 +11,7 @@ public class Main {
         System.out.println(h.getAverageWeight());
         h.setName("Rex");
         h.setAge(6);
+        h.getTailLength();
 
 //        Dog d = new Dog(0);
 //        d.setName("Rex");

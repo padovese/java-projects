@@ -22,5 +22,9 @@ public class Husky extends Dog{
 
     }
 
+    public int getTailLength(){
+        return 20;
+    }
+
 
 }
