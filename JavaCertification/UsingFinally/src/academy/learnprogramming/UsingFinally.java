@@ -25,7 +25,7 @@ public class UsingFinally {
         } finally {
             System.out.println("end.");
         }
-        
+
     }
 
     public static String firstToUppercase(String[] array) {
