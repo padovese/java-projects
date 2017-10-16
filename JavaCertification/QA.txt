@@ -67,3 +67,37 @@ Questions Academy LearnProgramming Java Certification
 9 - A 		not ok (you can store null on Integer field/array, but if you'll print it will throw nullPointerException)
 					Integer.parseInt recieve a String and return an int. Integer.valueOf recieve a String or int and return an Integer)
 10 - ADEHK 	ok
+
+
+1 - BC 		ok
+2 - AD 		ok
+3 - ACD 	ok
+4 - ABEG 	not ok (parameters of a method can have arrays and varargs with no problem. var agrs cannot be used like ...int a, instead use int... a)
+5 - DFG 	not ok (parameters cannot be passed using {} inside de brackets
+6 - E 		ok
+7 - BF 		not ok ( pay attention, methods assigned to null can call static methods without problem. But if they call instance methods it should throws nullPointerException)
+8 - D 		not ok (actually the logic is correct, but there is a need to count twice when you do not assign a value to a final variable and another erro when you try to do this inside a main(or another) method)
+9 - BC 		not ok (method parameter have nothing to do with imports)
+10 - C 		not ok (lack of attention! damn it)
+
+
+6 - CEFG
+
+
+1 - DF 		ok
+2 - B 		not ok (read all the lines goddamn)
+3 - F 		ok
+4 - B 		OK
+5 - A 		not ok (Read Carefully the questions)
+6 - D 		not ok (Again, read with attention)
+
+1 - BE 		not ok (only B is correct)
+2 - BD 		ok
+3 - B 		ok
+4 - C 		ok
+5 - C 		ok
+6 - E 		ok
+7 - B 		ok
+8 - ABDG 	ok
+9 - BCE 	not ok (methods can have exceptions as return types)
+10 - ADE 	not ok (NumberFormatException and IllegalArgumentException are unchecked exceptions aswell)
