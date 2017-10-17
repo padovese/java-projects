@@ -67,3 +67,16 @@ Questions Academy LearnProgramming Java Certification
 9 - A 		not ok (you can store null on Integer field/array, but if you'll print it will throw nullPointerException)
 					Integer.parseInt recieve a String and return an int. Integer.valueOf recieve a String or int and return an Integer)
 10 - ADEHK 	ok
+
+
+1 - BE 		not ok (interface methos stards as public)
+2 - E 		ok
+3 - ABE 	not ok (interfaces can be a reference to a class, if the interface is a superclass like any class)
+4 - E 		not ok (doesnt compile because it needs to implement a method from interface)
+5 - 
+
+
+VO-FS VAS / TIM Protect 5.90
+1056
+
+ligar e teclar 0

@@ -20,7 +20,7 @@ public class PolyParameters {
         h.printDetails();
 
         Husky h1 = createObject("Husky");
-        
+
     }
 
     public static void printDetails(Animal animal){
