@@ -48,6 +48,8 @@ public class LamdaExpressions {
         //print(animals, new CheckCanJump());
         print(animals, animal -> animal.canJump());
         print(animals, animal -> !animal.canJump());
+
+
     }
 
     private static void print(List<Animal> animals, CheckAnimal filter){
