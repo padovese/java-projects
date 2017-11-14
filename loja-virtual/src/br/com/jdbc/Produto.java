@@ -2,8 +2,13 @@ package br.com.jdbc;
 
 public class Produto {
 	private int id;
-	private String name;
+	private String nome;
 	private String desc;
+
+	public Produto(int id, String nome) {
+		this.id = id;
+		this.nome = nome;
+	}
 
 	public int getId() {
 		return id;
@@ -14,11 +19,11 @@ public class Produto {
 	}
 
 	public String getName() {
-		return name;
+		return nome;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.nome = name;
 	}
 
 	public String getDesc() {

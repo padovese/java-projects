@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 import br.com.jdbc.Produto;
 
@@ -33,5 +34,19 @@ public class ProdutosDAO {
 			}
 		}
 
+	}
+
+	public List<Produto> lista() throws SQLException {
+		String sql = "select * from produto";
+		// try(PreparedStatement stmt = con.prepareStatement(sql)){
+		// stmt.execute();
+		//
+		// try(ResultSet rs = stmt.getResultSet()){
+		// while(rs.next()) {
+		// new Produto()
+		// }
+		// }
+		// }
+		return null;
 	}
 }
