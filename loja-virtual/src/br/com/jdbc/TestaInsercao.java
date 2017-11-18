@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class TestaInsercao {
 	public static void main(String[] args) throws SQLException {
-		Connection connection = Database.getConnection();
+		Connection connection = Database.getConnection("Oracle");
 
 		String sql = "insert into rh_ss.padova values(?)";
 		PreparedStatement statement = connection.prepareStatement(sql);

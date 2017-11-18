@@ -7,7 +7,7 @@ import java.sql.Statement;
 public class TestaRemocao {
 
 	public static void main(String[] args) throws SQLException {
-		Connection connection = Database.getConnection();
+		Connection connection = Database.getConnection("Oracle");
 
 		Statement statement = connection.createStatement();
 		boolean result = statement.execute("delete from rh_ss.padova");
