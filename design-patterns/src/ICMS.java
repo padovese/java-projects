@@ -9,6 +9,7 @@ public class ICMS extends Imposto {
 		super(outroImposto);
 	}
 	
+	@Override
 	public double calcula(Orcamento orcamento) {
 		double icms = orcamento.getValor() * 0.1 + calculoDoOutroImposto(orcamento);
 		return icms;
