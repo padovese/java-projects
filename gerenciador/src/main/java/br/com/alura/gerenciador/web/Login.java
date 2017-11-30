@@ -26,7 +26,7 @@ public class Login extends HttpServlet {
 			writer.println("<html><body>Erro ao logar.</body></html>");
 		} else {
 			HttpSession session = req.getSession();
-			session.setAttribute("usuario.logado", usuario);
+			session.setAttribute("usuarioLogado", usuario);
 			// Cookie cookie = new Cookie("usuario.logado", usuario.getEmail());
 			// resp.addCookie(cookie);
 			writer.println("<html><body>Usuário " + usuario.getEmail() + " logado com sucesso.</body></html>");

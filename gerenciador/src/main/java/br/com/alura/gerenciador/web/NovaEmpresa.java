@@ -3,6 +3,7 @@ package br.com.alura.gerenciador.web;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,15 +18,14 @@ public class NovaEmpresa extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//super.doGet(req, resp);
 		String nomeEmpresa = req.getParameter("nomeEmpresa");
 		Empresa empresa = new Empresa(nomeEmpresa);
 		new EmpresaDAO().adiciona(empresa);
-		PrintWriter writer = resp.getWriter();
-		writer.println("<html><body>");
-		writer.println("Empresa " + empresa.getNome() + " cadastrada com sucesso.");
-		writer.println("</body></html>");
+		req.setAttribute("empresa", empresa.getNome());
+		RequestDispatcher dispatcher = req.getRequestDispatcher("WEB-INF/paginas/novaEmpresa.jsp");
+		dispatcher.forward(req, resp);
+		
+		
 		
 	}
 }
