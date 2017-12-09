@@ -1,0 +1,59 @@
+package modelo;
+
+import java.util.Date;
+
+public class Conta {
+
+	private Long id;
+	
+	private String descricao;
+	
+	private boolean paga;
+	
+	private Date dataPagamento;
+	
+	private TipoDaConta tipo;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public boolean isPaga() {
+		return paga;
+	}
+
+	public void setPaga(boolean paga) {
+		this.paga = paga;
+	}
+
+	public Date getDataPagamento() {
+		return dataPagamento;
+	}
+
+	public void setDataPagamento(Date dataPagamento) {
+		this.dataPagamento = dataPagamento;
+	}
+
+	public TipoDaConta getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoDaConta tipo) {
+		this.tipo = tipo;
+	}
+	
+	
+	
+}
