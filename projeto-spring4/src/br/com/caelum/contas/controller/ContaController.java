@@ -28,6 +28,14 @@ public class ContaController {
 		return "conta-adicionada";
 	}
 	
+	@RequestMapping("/removeConta")
+	public String remove(Conta conta) {
+		ContaDAO contaDAO = new ContaDAO();
+		contaDAO.remove(conta);
+		
+		return "conta/delecao-ok";
+	}
+	
 	@RequestMapping("/listaContas")
 	public ModelAndView lista() {
 		ContaDAO contaDAO = new ContaDAO();
