@@ -7,6 +7,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+
+<script src="resources/js/jquery.js"></script>
+<script type="text/javascript">
+	
+	function deuCerto(dadosDaResposta){
+		alert("Conta paga com sucesso!");
+		$(location).attr('href','//listaContas')
+	}
+	
+	function pagaAgora(id){
+		//alert("1");
+		$.get("pagaConta?id=" + id, deuCerto);
+		//alert("2");//funcoes assincronas
+		//window.location.replace("/listaContas");
+	}
+
+	
+</script>
 </head>
 <body>
 
@@ -38,6 +56,11 @@
 					<td><fmt:formatDate value="${conta.dataPagamento.time}" pattern="dd/MM/yyyy" /></td>
 					<td>
 						<a href="removeConta?id=${conta.id}">Deletar</a>
+						
+						<c:if test="${conta.paga eq false}">
+						 | 
+						<a href="#" onclick="pagaAgora(${conta.id})">Pagar</a>
+						</c:if>
 					</td>
 				</tr>
 		</c:forEach>
