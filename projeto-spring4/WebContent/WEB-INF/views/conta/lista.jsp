@@ -13,7 +13,7 @@
 	
 	function deuCerto(dadosDaResposta){
 		alert("Conta paga com sucesso!");
-		$(location).attr('href','//listaContas')
+		//$(location).attr('href','//listaContas')
 	}
 	
 	function pagaAgora(id){
