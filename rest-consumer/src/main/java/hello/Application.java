@@ -15,7 +15,7 @@ public class Application {
 //        Quote quote = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
 //        log.info(quote.toString());
 
-        Content content = restTemplate.getForObject("http://localhost:8080/greeting", Content.class);
+        Content content = restTemplate.getForObject("http://localhost:8080/greetingDAO?id=4", Content.class);
         log.info(content.toString());
     }
 
