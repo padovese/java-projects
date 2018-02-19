@@ -88,5 +88,10 @@ Is 1 greater than 2 without using cout: ${1>2}
  </fieldset>
 </form>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>$(document).ready(function(){
+    	$(#output).load("Sysdate.class")
+    })</script>
+
 </body>
 </html>
