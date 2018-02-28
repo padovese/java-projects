@@ -2,10 +2,12 @@ package br.com.produtos;
 
 import java.time.LocalDateTime;
 
-public class Sysdate {
+public class ImprimeData {
 	
 	public static void main(String[] args) {
-		System.out.println(LocalDateTime.now());
+		int variavel = 0;
+		
+		System.out.println(LocalDateTime.now() + " " + variavel);
 	}
 	
 }
