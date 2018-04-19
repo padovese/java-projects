@@ -1,6 +1,7 @@
 package br.com.spring.loja.conf;
 
 import javax.servlet.Filter;
+import javax.servlet.MultipartConfigElement;
 
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
@@ -27,5 +28,9 @@ public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletI
 		CharacterEncodingFilter EncodingFilter = new CharacterEncodingFilter();
 		EncodingFilter.setEncoding("UTF-8");
 		return new Filter[] {EncodingFilter};		
+	}
+	
+	protected void customizeRegistration(javax.servlet.ServletRegistration.Dynamic registration) {
+		registration.setMultipartConfig(new MultipartConfigElement(""));
 	}
 }

@@ -26,12 +26,22 @@ public class Produto {
 		return dataLancamento;
 	}
 
+	@ElementCollection
+	private List<Preco> precos;
+	
+	private String sumarioPath;
+	
+	public String getSumarioPath() {
+		return sumarioPath;
+	}
+
+	public void setSumarioPath(String sumarioPath) {
+		this.sumarioPath = sumarioPath;
+	}
+
 	public void setDataLancamento(LocalDate dataLancamento) {
 		this.dataLancamento = dataLancamento;
 	}
-
-	@ElementCollection
-	private List<Preco> precos;
 
 	public int getId() {
 		return id;
