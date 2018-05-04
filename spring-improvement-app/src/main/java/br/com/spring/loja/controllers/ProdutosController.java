@@ -46,7 +46,7 @@ public class ProdutosController {
 	public ModelAndView gravar(MultipartFile sumario, @Valid Produto produto, BindingResult result, 
 			RedirectAttributes redirectAttributes) {
 		
-		new FileSaver;
+		//new FileSaver;
 		System.out.println(sumario.getOriginalFilename());
 		
 		if(result.hasErrors()) {
@@ -75,5 +75,12 @@ public class ProdutosController {
         List<Produto> produtos = produtoDAO.listar();
         model.addAttribute("produtos", produtos);
         return "produtos/lista";
+    }
+	
+	@RequestMapping("JSTL-utils")
+    public String jstlUtils(Model model) {
+        List<Produto> produtos = produtoDAO.listar();
+        model.addAttribute("produtos", produtos);
+        return "JSTL-utils/foreach";
     }
 }
