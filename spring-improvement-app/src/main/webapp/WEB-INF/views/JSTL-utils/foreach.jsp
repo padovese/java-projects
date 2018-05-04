@@ -8,15 +8,29 @@
 <title>Insert title here</title>
 </head>
 <body>
-<table>
-<c:forEach var="p" items="${produtos }">
-	<tr id="produto${p.id }">
-		<td>id: ${p.id }</td>
-		<td>titulo: ${p.titulo }</td>
-		<td>descricao: ${p.descricao }</td>
-		<td>data de lançamento: ${p.dataLancamento }</td>
-	</tr>
-</c:forEach>
-</table>
+	<table>
+		<tr>
+			<th>Contador</th>
+			<th>ID</th>
+			<th>titulo</th>
+			<th>descricao</th>
+			<th>Data de lançamento</th>
+			<th>Tamanho do livro</th>
+		</tr>
+		<c:forEach var="p" items="${produtos }" varStatus="st">
+			<tr id="produto${p.id }">
+				<td>Linha ${st.count }</td>
+				<td>id: ${p.id }</td>
+				<td>titulo: ${p.titulo }</td>
+				<td>descricao: ${p.descricao }</td>
+				<td>data de lançamento: ${p.dataLancamento }</td>
+				<td><c:if test="${p.paginas > 50 }">Livro grande</c:if></td>
+				<td><c:choose>
+				<c:when test="${p.paginas > 50 }">Livro grande</c:when>
+				<c:otherwise>Livro pequeno</c:otherwise>
+				</c:choose></td>
+			</tr>
+		</c:forEach>
+	</table>
 </body>
 </html>
