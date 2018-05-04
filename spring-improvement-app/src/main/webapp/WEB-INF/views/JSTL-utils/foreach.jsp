@@ -32,5 +32,7 @@
 			</tr>
 		</c:forEach>
 	</table>
+	
+	<a href="<c:url value="/spring-improvement-app/" />">Home</a>
 </body>
 </html>
