@@ -26,13 +26,17 @@
 				<td>data de lançamento: ${p.dataLancamento }</td>
 				<td><c:if test="${p.paginas > 50 }">Livro grande</c:if></td>
 				<td><c:choose>
-				<c:when test="${p.paginas > 50 }">Livro grande</c:when>
-				<c:otherwise>Livro pequeno</c:otherwise>
-				</c:choose></td>
+						<c:when test="${p.paginas > 50 }">Livro grande</c:when>
+						<c:otherwise>Livro pequeno</c:otherwise>
+					</c:choose></td>
 			</tr>
 		</c:forEach>
 	</table>
-	
+
 	<a href="<c:url value="/spring-improvement-app/" />">Home</a>
+	
+	<!-- Seta variável através de JSTL na JSP atual -->
+	<c:set var="nome" value="João da Silva" />
+	<c:out value="${nome}" />
 </body>
 </html>
