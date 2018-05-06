@@ -81,6 +81,6 @@ public class ProdutosController {
     public String jstlUtils(Model model) {
         List<Produto> produtos = produtoDAO.listar();
         model.addAttribute("produtos", produtos);
-        return "JSTL-utils/foreach";
+        return "JSTL-utils/exemplos";
     }
 }

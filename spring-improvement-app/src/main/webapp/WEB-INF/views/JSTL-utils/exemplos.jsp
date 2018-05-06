@@ -10,6 +10,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- Pega mensagem no message.properties, pode servir para multilanguage -->
+<h2><fmt:message key="bemVindo" /></h2>
 	<table>
 		<tr>
 			<th>Contador</th>
@@ -48,5 +50,8 @@
 	<!-- Seta variável através de JSTL na JSP atual -->
 	<c:set var="nome" value="João da Silva" />
 	<c:out value="${nome}" />
+	
+	<!-- Semelhante ao include -->
+	<c:import url="rodape.jsp" />
 </body>
 </html>
