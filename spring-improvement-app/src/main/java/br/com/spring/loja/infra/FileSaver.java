@@ -20,10 +20,10 @@ public class FileSaver {
 			
 			String realPath = request.getServletContext().getRealPath("/" + baseFolder);
 			
-			String path = baseFolder + "/" + file.getOriginalFilename();
+			String path = realPath + "/" + file.getOriginalFilename();
 			file.transferTo(new File(path));
 			
-			return path;
+			return baseFolder + "/" + file.getOriginalFilename();
 		} catch (IllegalStateException | IOException e) {
 			throw new RuntimeException(e);
 		}

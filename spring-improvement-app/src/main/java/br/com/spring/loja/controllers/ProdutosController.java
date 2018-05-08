@@ -29,6 +29,9 @@ public class ProdutosController {
 	@Autowired
 	private ProdutoDao produtoDAO;
 	
+	@Autowired
+	private FileSaver fileSaver;
+	
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
 	    binder.addValidators(new ProdutoValidation());
@@ -46,12 +49,12 @@ public class ProdutosController {
 	public ModelAndView gravar(MultipartFile sumario, @Valid Produto produto, BindingResult result, 
 			RedirectAttributes redirectAttributes) {
 		
-		//new FileSaver;
-		System.out.println(sumario.getOriginalFilename());
-		
 		if(result.hasErrors()) {
 			return form(produto);
 		}
+		
+		String path = fileSaver.write("arquivos-sumario", sumario);
+		produto.setSumarioPath(path);
 		
 		System.out.println(produto);
 		produtoDAO.gravar(produto);
