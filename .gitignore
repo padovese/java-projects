@@ -49,7 +49,6 @@ Temporary Items
 #Java metadata
 .metadata
 .recommenders
-*.xml
 *.iml
 
 # ignore an entire directory
