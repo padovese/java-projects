@@ -1,14 +1,19 @@
 package br.com.spring.loja.models;
 
+import java.math.BigDecimal;
+
 public class CarrinhoItem {
 
 	private Produto produto;
 	private TipoPreco tipoPreco;
 
 	public CarrinhoItem(Produto produto, TipoPreco tipoPreco) {
-		super();
 		this.produto = produto;
 		this.tipoPreco = tipoPreco;
+	}
+	
+	public BigDecimal getPreco() {
+		return produto.precoPara(tipoPreco);
 	}
 
 	public Produto getProduto() {
@@ -55,4 +60,7 @@ public class CarrinhoItem {
 		return true;
 	}
 	
+	public BigDecimal getTotal(int quantidade) {
+		return this.getPreco().multiply(new BigDecimal(quantidade));			
+	}
 }

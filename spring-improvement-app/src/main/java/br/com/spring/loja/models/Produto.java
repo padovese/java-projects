@@ -1,5 +1,6 @@
 package br.com.spring.loja.models;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -111,5 +112,7 @@ public class Produto {
 		return true;
 	}
 
-	
+	public BigDecimal precoPara(TipoPreco tipoPreco) {
+		return precos.stream().filter(preco -> preco.getTipo().equals(tipoPreco)).findFirst().get().getValor();
+	}
 }
