@@ -2,6 +2,7 @@ package br.com.spring.loja.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -42,5 +43,10 @@ public class CarrinhoController {
 		Produto produto = produtoDao.find(produtoId);
 		CarrinhoItem carrinhoItem = new CarrinhoItem(produto, tipoPreco);
 		return carrinhoItem;
+	}
+	
+	public ModelAndView remover(Integer produtoId, TipoPreco tipoPreco) {
+		carrinho.remover(produtoId, tipoPreco);
+		return new ModelAndView("redirect:/carrinho");
 	}
 }
