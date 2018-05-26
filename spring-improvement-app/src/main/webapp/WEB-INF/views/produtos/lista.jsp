@@ -10,6 +10,7 @@
 </head>
 <body>
 	<p>${sucesso}</p>
+	<p>${falha }</p>
 	<table>
 		<tr>
 			<td>Título</td>
