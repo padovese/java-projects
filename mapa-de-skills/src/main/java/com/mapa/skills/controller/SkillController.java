@@ -20,6 +20,7 @@ public class SkillController {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView consulta() {
+		
 		ModelAndView mv = new ModelAndView("skill/consulta");
 		
 		return mv;
