@@ -4,6 +4,7 @@ import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.mapa.skills.model.Skill;
@@ -17,8 +18,10 @@ public class SkillController {
 		return new ModelAndView("skill/cadastro");
 	}
 	
-	@RequestMapping("/consulta")
+	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView consulta() {
-		return new ModelAndView("skill/consulta");
+		ModelAndView mv = new ModelAndView("skill/consulta");
+		
+		return mv;
 	}
 }
