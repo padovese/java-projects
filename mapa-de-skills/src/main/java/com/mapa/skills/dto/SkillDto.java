@@ -20,5 +20,9 @@ public class SkillDto {
 		this.tipoSkill = tipoSkill;
 	}
 	
+	@Override
+	public String toString() {
+		return "SkillDto [nome=" + nome + ", tipoSkill=" + tipoSkill + "]";
+	}
 	
 }
