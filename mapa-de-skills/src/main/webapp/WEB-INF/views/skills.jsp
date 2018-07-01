@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<form action="skills" method="post">
+<input type="text" name="nome">
+</form>
 </body>
 </html>
