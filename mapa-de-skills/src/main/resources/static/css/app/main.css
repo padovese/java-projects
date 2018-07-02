@@ -1,0 +1,18 @@
+#logo{
+	width: 100px;
+	height: 100px;
+	margin-bottom: 10px;
+}
+
+#logo-github{
+	width: 65px;
+	height: 55px;
+}
+
+.div-logo-github{
+	float:left;
+}
+
+.div-text-github{
+	padding-top: 16px;
+}
