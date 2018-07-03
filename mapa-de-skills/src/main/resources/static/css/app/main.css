@@ -9,10 +9,16 @@
 	height: 55px;
 }
 
-.div-logo-github{
-	float:left;
+.center{
+	text-align: center;
 }
 
-.div-text-github{
-	padding-top: 16px;
+.link-github:link, .link-github:hover, .link-github:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+no-margin{
+	margin: 0;
 }
