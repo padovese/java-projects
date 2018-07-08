@@ -1,7 +1,6 @@
 $(document).ready(function() {
     setLinkGithub();
     setClassMenu();
-
 });
 
 function setLinkGithub(){

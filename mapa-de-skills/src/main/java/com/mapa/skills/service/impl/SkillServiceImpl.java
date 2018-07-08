@@ -3,18 +3,16 @@ package com.mapa.skills.service.impl;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
-import com.fasterxml.jackson.core.JsonGenerationException;
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mapa.skills.dto.SkillDto;
 import com.mapa.skills.service.SkillService;
 
-@Repository
+@Service
 public class SkillServiceImpl implements SkillService{
 	
 	private static final String directory = "/home/padovese/Desktop/github/java-projects/mapa-de-skills/data/skills/";
@@ -68,6 +66,10 @@ public class SkillServiceImpl implements SkillService{
 			}
 		}
 		
+		ArrayList<String> aç = new ArrayList<>();
+		aç.add("abc");
+		
+		Collections.sort(skills, (p1, p2) -> p1.getNome().toLowerCase().compareTo(p2.getNome().toLowerCase()));
 		return skills;
 	}
 

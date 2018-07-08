@@ -10,29 +10,36 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.mapa.skills.dto.SkillDto;
-import com.mapa.skills.model.Skill;
-import com.mapa.skills.service.impl.SkillServiceImpl;
+import com.mapa.skills.service.SkillService;
 
 @Controller
 @RequestMapping("/skills")
 public class SkillController {
 	
 	@Autowired
-	SkillServiceImpl skillServiceImpl;
+	SkillService skillService;
 
 	@RequestMapping(method=RequestMethod.POST)
-	public ModelAndView cadastro(@Valid SkillDto skillDto, BindingResult resul) {
-		skillServiceImpl.gravar(skillDto);
-		return new ModelAndView("skills");
+	public ModelAndView cadastro(@Valid SkillDto skillDto, BindingResult result, RedirectAttributes redirectAttributes) {
+		skillService.gravar(skillDto);
+		
+		if(result.hasErrors()) {
+			redirectAttributes.addFlashAttribute("erro", "Skill não cadastrada.");
+		} else {		
+			redirectAttributes.addFlashAttribute("sucesso", "Skill cadastrada com sucesso!");
+		}
+		
+		return new ModelAndView("redirect:skills");
 	}
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView consulta() {
 		ModelAndView mv = new ModelAndView("skills");
 
-		List<SkillDto> skills = skillServiceImpl.getSkills();
+		List<SkillDto> skills = skillService.getSkills();
 		mv.addObject("skills", skills);
 		
 		return mv;

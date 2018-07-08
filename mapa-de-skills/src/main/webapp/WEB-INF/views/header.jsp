@@ -12,6 +12,7 @@
 <script src="/js/lib/jquery.min.js"></script>
 <script src="/js/lib/bootstrap.min.js"></script>
 <script src="/js/app/main.js"></script>
+<script src="/js/lib/Chart.min.js"></script>
 <style>
 /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
 .row.content {
@@ -58,7 +59,7 @@ footer {
 				</ul>
 				<br>
 				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Search Blog..">
+					<input type="text" class="form-control" placeholder="(ainda)n funfa haha">
 					<span class="input-group-btn">
 						<button class="btn btn-default" type="button">
 							<span class="glyphicon glyphicon-search"></span>
