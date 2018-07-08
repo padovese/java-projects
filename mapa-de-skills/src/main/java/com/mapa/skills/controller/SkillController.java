@@ -28,7 +28,7 @@ public class SkillController {
 		ModelAndView mv = new ModelAndView("skills");
 
 		List<SkillDto> skills = new SkillServiceImpl().getSkills();
-		mv.addObject("skill", skills);
+		mv.addObject("skills", skills);
 		
 		return mv;
 	}
