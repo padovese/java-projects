@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,10 +18,13 @@ import com.mapa.skills.service.impl.SkillServiceImpl;
 @Controller
 @RequestMapping("/skills")
 public class SkillController {
+	
+	@Autowired
+	SkillServiceImpl skillServiceImpl;
 
 	@RequestMapping(method=RequestMethod.POST)
 	public ModelAndView cadastro(@Valid SkillDto skillDto, BindingResult resul) {
-		new SkillServiceImpl().gravar(skillDto);
+		skillServiceImpl.gravar(skillDto);
 		return new ModelAndView("skills");
 	}
 	
@@ -28,7 +32,7 @@ public class SkillController {
 	public ModelAndView consulta() {
 		ModelAndView mv = new ModelAndView("skills");
 
-		List<SkillDto> skills = new SkillServiceImpl().getSkills();
+		List<SkillDto> skills = skillServiceImpl.getSkills();
 		mv.addObject("skills", skills);
 		
 		return mv;
