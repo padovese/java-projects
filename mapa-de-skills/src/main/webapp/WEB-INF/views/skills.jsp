@@ -7,9 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="skills" method="post">
-		nome: <input type="text" name="nome"> <br>
-tipo: 
-	</form>
+	${skill.nome }
+	${skill.tipoSkill }
 </body>
 </html>

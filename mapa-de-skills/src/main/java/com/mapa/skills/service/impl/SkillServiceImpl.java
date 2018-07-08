@@ -2,6 +2,7 @@ package com.mapa.skills.service.impl;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
@@ -19,14 +20,7 @@ public class SkillServiceImpl implements SkillService{
 		try {
 		mapper.writeValue(new File("/home/padovese/Desktop/github/java-projects/mapa-de-skills/data/" 
 		+ skillDto.getNome() + ".json"), skillDto);
-		} catch (JsonGenerationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (JsonMappingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -40,14 +34,7 @@ public class SkillServiceImpl implements SkillService{
 					+ nome + ".json"), SkillDto.class);
 			
 			return skillDto;
-		} catch (JsonParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (JsonMappingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -56,8 +43,30 @@ public class SkillServiceImpl implements SkillService{
 	
 	@Override
 	public List<SkillDto> getSkills() {
-		// TODO Auto-generated method stub
-		return null;
+		List<String> results = new ArrayList<>();
+		File[] files = new File("/home/padovese/Desktop/github/java-projects/mapa-de-skills/data/").listFiles();
+		
+		for(File file : files) {
+			if(file.isFile()) {
+				results.add(file.getName());
+			}			
+		}
+		
+		List<SkillDto> skills = new ArrayList<SkillDto>();
+		for(String result : results) {
+			ObjectMapper mapper = new ObjectMapper();
+			
+			try {
+				SkillDto skillDto = mapper.readValue(new File("/home/padovese/Desktop/github/java-projects/mapa-de-skills/data/"
+						+ result), SkillDto.class);
+				
+				skills.add(skillDto);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return skills;
 	}
 
 	

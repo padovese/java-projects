@@ -1,5 +1,7 @@
 package com.mapa.skills.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -23,8 +25,10 @@ public class SkillController {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView consulta() {
-		
 		ModelAndView mv = new ModelAndView("skills");
+
+		List<SkillDto> skills = new SkillServiceImpl().getSkills();
+		mv.addObject("skill", skills);
 		
 		return mv;
 	}
