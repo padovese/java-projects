@@ -12,7 +12,6 @@
 <script src="/js/lib/jquery.min.js"></script>
 <script src="/js/lib/bootstrap.min.js"></script>
 <script src="/js/app/main.js"></script>
-<script src="/js/lib/Chart.min.js"></script>
 <style>
 /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
 .row.content {
@@ -50,7 +49,7 @@ footer {
 		<div class="row content">
 			<div class="col-sm-2 sidenav">
 				<h4>Mapa de Skills</h4>
-				<img id="logo" src="/images/logo.jpg">
+				<img id="logo" src="/images/logo.png">
 				<ul class="nav nav-pills nav-stacked">
 					<li id="menu1" class="active"><a href="/">Dashboard</a></li>
 					<li id="menu2"><a href="/skills">Mapa de Skills</a></li>
