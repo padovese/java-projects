@@ -17,7 +17,7 @@ import com.mapa.skills.service.SkillService;
 
 @Controller
 @RequestMapping("/skills")
-public class SkillController {
+public class SkillsController {
 	
 	@Autowired
 	SkillService skillService;

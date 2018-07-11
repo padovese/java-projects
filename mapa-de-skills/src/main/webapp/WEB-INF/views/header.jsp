@@ -52,8 +52,8 @@ footer {
 				<img id="logo" src="/images/logo.png">
 				<ul class="nav nav-pills nav-stacked">
 					<li id="menu1" class="active"><a href="/">Dashboard</a></li>
-					<li id="menu2"><a href="/skills">Mapa de Skills</a></li>
-					<li id="menu3"><a href="#section3">Cadastro de Skill</a></li>
+					<li id="menu2"><a href="/developers">Status do Dev</a></li>
+					<li id="menu3"><a href="/skills">Mapa de Skills</a></li>
 					<li id="menu4"><a href="#section3">Cadastro de Dev</a></li>
 				</ul>
 				<br>
