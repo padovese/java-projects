@@ -2,6 +2,7 @@
 #graph{
 	width: 350px;
 	height: 350px;
+	display: inline-block;
 }
 </style>
 
@@ -19,8 +20,13 @@
 				<div id="graph">
 				<canvas id="secondGraph" width="400" height="400"></canvas>
 				</div>
+				
+				<div id="graph">
+				<canvas id="thirdChart" width="400" height="400"></canvas>
+				</div>
 
 				
+				<br>
 				Por quê não criar sessão de dojo para postagem de treinamentos, e sessão de café da manhã e outras
 				utilidades da horizontal como agenda?
 
