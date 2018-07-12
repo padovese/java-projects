@@ -5,12 +5,29 @@
 </h4>
 <hr>
 
-<form action="developers/consulta" method="get" class="form-inline">
+<form action="developers" method="post" class="form-inline">
 	<div class="form-group">
-	<label for="nome">Funcional:</label> 
-	<input name="nome" type="number" class="form-control" placeholder="digite a funcional">
+		<label for="funcional">Funcional:</label> 
+		<input name="funcional" type="text" class="form-control" placeholder="digite a funcional">
 	</div> 
-	<button type="submit" class="btn btn-default">Pesquisa</button>
+	<div class="form-group">
+		<label for="nome">Nome:</label> 
+		<input name="nome" type="text" class="form-control" placeholder="digite o nome">
+	</div>
+	<div class="form-group">
+		<label for="squad">Squad:</label> 
+		<input name="squad" type="text" class="form-control" placeholder="digite a squad">
+	</div> 
+	<div class="form-group">
+	<label for="RT">RT:</label> 
+	<select	name="RT" class="form-control">
+		<option value="PF">PF</option>
+		<option value=PJ>PJ</option>
+		<option value="SALA_DE_VENDAS_PF">SALA_DE_VENDAS_PF</option>
+		<option value="SALA_DE_VENDAS_PJ">SALA_DE_VENDAS_PJ</option>
+	</select>
+	</div>
+	<button type="submit" class="btn btn-default">Cadastra</button>
 </form>
 
 <br><br>
