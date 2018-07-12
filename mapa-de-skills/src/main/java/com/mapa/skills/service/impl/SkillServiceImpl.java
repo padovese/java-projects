@@ -53,7 +53,7 @@ public class SkillServiceImpl implements SkillService{
 			}			
 		}
 		
-		List<SkillDto> skills = new ArrayList<SkillDto>();
+		List<SkillDto> skills = new ArrayList<>();
 		for(String result : results) {
 			ObjectMapper mapper = new ObjectMapper();
 			
@@ -65,9 +65,6 @@ public class SkillServiceImpl implements SkillService{
 				e.printStackTrace();
 			}
 		}
-		
-		ArrayList<String> aç = new ArrayList<>();
-		aç.add("abc");
 		
 		Collections.sort(skills, (p1, p2) -> p1.getNome().toLowerCase().compareTo(p2.getNome().toLowerCase()));
 		return skills;
