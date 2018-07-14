@@ -1,5 +1,4 @@
-
-
+function firstGraph(){
 var ctx = document.getElementById("firstGraph").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
@@ -31,8 +30,9 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+}
 
-
+function secondGraph(){
 var cty = document.getElementById("secondGraph").getContext('2d');
 var myPieChart = new Chart(cty,{
     type: 'pie',
@@ -64,9 +64,10 @@ var myPieChart = new Chart(cty,{
         }
     }
 });
+}
 
+function thirdGraph(){
 var marksCanvas = document.getElementById("thirdChart");
-
 var radarChart = new Chart(marksCanvas, {
   type: 'radar',
   data: {
@@ -82,4 +83,20 @@ var radarChart = new Chart(marksCanvas, {
 	  }]
 	}
 });
+}
 
+
+function fourthGraph(){
+var personalGraph = document.getElementById("developerPersonalChart");
+var thePersonalGraph = new Chart(personalGraph, {
+  type: 'radar',
+  data: {
+	  labels: ["Java", "JavaScript", "SQL", "git", "ShellScript", "Cobol"],
+	  datasets: [ {
+	    label: nomeDeveloper,
+	    backgroundColor: "rgba(0,0,200,0.2)",
+	    data: [4, 3, 5, 4, 2, 0]
+	  }]
+	}
+});
+}

@@ -30,12 +30,16 @@
 				Por quê não criar sessão de dojo para postagem de treinamentos, e sessão de café da manhã e outras
 				utilidades da horizontal como agenda?
 
+<script src="/js/lib/Chart.min.js"></script>
+<script src="/js/app/graph.js"></script>
 <script>
 const totalLinguagem = ${totalLinguagem}; 
 const totalFramework = ${totalFramework}; 
 const totalFerramenta = ${totalFerramenta};
+firstGraph();
+secondGraph();
+thirdGraph();
 </script>
-<script src="/js/lib/Chart.min.js"></script>
-<script src="/js/app/graph.js"></script>
+
 
 <%@ include file="footer.jsp" %>

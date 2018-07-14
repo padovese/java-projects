@@ -42,7 +42,7 @@ ${developer.nome }
 	</thead>
 	<tbody>
 		<c:forEach items="${developers }" var="developer">
-			<tr>
+			<tr class="clickable-row" data-href="/developers/${developer.funcional}">
 				<td>${developer.funcional }</td>
 				<td>${developer.nome }</td>
 				<td>${developer.squad }</td>
@@ -54,3 +54,11 @@ ${developer.nome }
 <br>
 
 <%@ include file="footer.jsp"%>
+
+<script>
+$(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+    });
+});
+</script>
