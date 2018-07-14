@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.mapa.skills.dto.DeveloperDto;
 import com.mapa.skills.service.DeveloperService;
+import com.mapa.skills.service.SkillService;
 
 @Controller
 @RequestMapping("/developers")
@@ -20,6 +21,9 @@ public class DevelopersController {
 
 	@Autowired
 	DeveloperService developerService;
+	
+	@Autowired
+	SkillService skillService;
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView form(@RequestParam(value = "sort", required = false) String sort) {
@@ -41,6 +45,8 @@ public class DevelopersController {
 	public ModelAndView personalPage(@PathVariable("funcional") String funcional) {
 		ModelAndView mv = new ModelAndView("developerPersonalPage");		
 		mv.addObject("developer", developerService.getDeveloperByFuncional(funcional));
+		
+		mv.addObject("skills", skillService.getSkills());
 		
 		return mv;
 	}

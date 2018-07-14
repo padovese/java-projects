@@ -5,6 +5,10 @@
 	display: inline-block;
 }
 
+#devInfo{
+	display: inline-block;
+}
+
 .bold{
     font-weight: bold
 }
@@ -21,12 +25,20 @@
 	<canvas id="developerPersonalChart" width="400" height="400"></canvas>
 </div>
 
-<div id="graph">
+<div id="devInfo">
+	[foto do dev]<br>
 	<label class="bold">Funcional:</label> ${developer.funcional }<br>
 	<label class="bold">Nome:</label> ${developer.nome }<br>
 	<label class="bold">Squad:</label> ${developer.squad }<br>
 	<label class="bold">RT:</label> ${developer.RT }<br>
+	<label class="bold">Metas técnicas:</label> <br>
 </div>
+
+<hr>
+
+<c:forEach items="${skills }" var="skill">
+	${skill.nome }
+</c:forEach>
 
 <script src="/js/lib/Chart.min.js"></script>
 <script src="/js/app/graph.js"></script>
