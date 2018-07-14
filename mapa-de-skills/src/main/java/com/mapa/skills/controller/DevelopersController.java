@@ -37,9 +37,9 @@ public class DevelopersController {
 		return new ModelAndView("redirect:developers");
 	}
 	
-	@RequestMapping(value="/{funcional}", method=RequestMethod.POST)
+	@RequestMapping(value="/{funcional}", method=RequestMethod.GET)
 	public ModelAndView personalPage(@PathVariable("funcional") String funcional) {
-		ModelAndView mv = new ModelAndView("personalPage");		
+		ModelAndView mv = new ModelAndView("developerPersonalPage");		
 		mv.addObject("developer", developerService.getDeveloperByFuncional(funcional));
 		
 		return mv;
