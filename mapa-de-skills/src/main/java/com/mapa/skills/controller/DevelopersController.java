@@ -5,6 +5,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,6 +35,14 @@ public class DevelopersController {
 		developerService.saveDeveloper(developerDto);
 		
 		return new ModelAndView("redirect:developers");
+	}
+	
+	@RequestMapping(value="/{funcional}", method=RequestMethod.POST)
+	public ModelAndView personalPage(@PathVariable("funcional") String funcional) {
+		ModelAndView mv = new ModelAndView("personalPage");		
+		mv.addObject("developer", developerService.getDeveloperByFuncional(funcional));
+		
+		return mv;
 	}
 	
 }
