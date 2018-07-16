@@ -1,5 +1,8 @@
 package com.mapa.skills.dto;
 
+import java.util.List;
+
+import com.mapa.skills.model.DeveloperSkills;
 import com.mapa.skills.utils.TipoRT;
 
 public class DeveloperDto {
@@ -8,6 +11,7 @@ public class DeveloperDto {
 	private String nome;
 	private TipoRT RT;
 	private String squad;
+	List<DeveloperSkills> skills;
 	
 	public String getFuncional() {
 		return funcional;
@@ -33,4 +37,11 @@ public class DeveloperDto {
 	public void setSquad(String squad) {
 		this.squad = squad;
 	}
+	public List<DeveloperSkills> getSkills() {
+		return skills;
+	}
+	public void setSkills(List<DeveloperSkills> skills) {
+		this.skills = skills;
+	}
+	
 }
