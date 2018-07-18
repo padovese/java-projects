@@ -22,3 +22,7 @@ function setClassMenu(){
 	    $("#menu3").addClass("active");
 	}
 }
+
+function deleteSelect(skill){
+	$(".selectNota" + skill).remove();
+}
