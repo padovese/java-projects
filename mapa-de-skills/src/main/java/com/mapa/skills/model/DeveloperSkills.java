@@ -2,20 +2,31 @@ package com.mapa.skills.model;
 
 public class DeveloperSkills {
 
-	private Skill skill;
-	private int nota;
+	private String nota;
+	private String skill;
 	
-	public String getSkill() {
-		return skill.getNome();
+	public DeveloperSkills() {
+		
 	}
-	public void setSkill(Skill skill) {
+	
+	public DeveloperSkills(String nota, String skill) {
+		super();
+		this.nota = nota;
 		this.skill = skill;
 	}
-	public int getNota() {
+	
+	public String getNota() {
 		return nota;
 	}
-	public void setNota(int nota) {
+	public void setNota(String nota) {
 		this.nota = nota;
 	}
+	public String getSkill() {
+		return skill;
+	}
+	public void setSkill(String skill) {
+		this.skill = skill;
+	}
+	
 	
 }

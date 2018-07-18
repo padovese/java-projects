@@ -9,7 +9,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.mapa.skills.dto.SkillDto;
 import com.mapa.skills.service.SkillService;
-import com.mapa.skills.service.impl.SkillServiceImpl;
 import com.mapa.skills.utils.TipoSkill;
 
 @Controller

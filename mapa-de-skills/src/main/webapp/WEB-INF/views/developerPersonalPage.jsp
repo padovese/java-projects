@@ -36,9 +36,36 @@
 
 <hr>
 
-<c:forEach items="${skills }" var="skill">
-	${skill.nome }
-</c:forEach>
+<table class="table table-hover">
+	<thead>
+		<th>Skill</th>
+		<th>Nível de experiência</th>
+	</thead>
+	<tbody>
+		<c:forEach items="${skills }" var="skill">
+			<tr>
+				<td>${skill.nome }</td>
+				<td>
+					<c:forEach items="${developer.skills }" var="developerSkill">
+						<c:if test="${skill.nome == developerSkill.skill}">
+								<select	name="tipoSkill" class="form-control">
+									<option value="0" <c:if test="${developerSkill.nota == 0 }">selected</c:if>>0</option>
+									<option value="1" <c:if test="${developerSkill.nota == 1 }">selected</c:if>>1</option>
+									<option value="2" <c:if test="${developerSkill.nota == 2 }">selected</c:if>>2</option>
+									<option value="3" <c:if test="${developerSkill.nota == 3 }">selected</c:if>>3</option>
+									<option value="4" <c:if test="${developerSkill.nota == 4 }">selected</c:if>>4</option>
+								</select>
+								<c:set var="flagSkill" value="1" />
+						</c:if>
+						<c:if test="${!flagSkill }">1
+						<c:set var="flagSkill" value="0" />
+						</c:if>
+					</c:forEach>
+				</td>	
+			</tr>
+		</c:forEach>
+	</tbody>
+</table>
 
 <script src="/js/lib/Chart.min.js"></script>
 <script src="/js/app/graph.js"></script>
