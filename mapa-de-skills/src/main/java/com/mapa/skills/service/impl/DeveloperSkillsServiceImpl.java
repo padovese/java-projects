@@ -6,10 +6,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mapa.skills.dto.DeveloperDto;
 import com.mapa.skills.dto.DeveloperSkillsDto;
 import com.mapa.skills.service.DeveloperSkillsService;
 
+@Service
 public class DeveloperSkillsServiceImpl implements DeveloperSkillsService{
 	
 	private static final String directory = "/home/padovese/Desktop/github/java-projects/mapa-de-skills/data/developer-skills/";
@@ -27,7 +31,7 @@ public class DeveloperSkillsServiceImpl implements DeveloperSkillsService{
 	}
 
 	@Override
-	public List<DeveloperSkillsDto> getDeveloperSkills() {
+	public List<DeveloperSkillsDto> getAllDeveloperSkills() {
 		List<String> results = new ArrayList<>();
 		File[] files = new File(directory).listFiles();
 		
@@ -50,8 +54,23 @@ public class DeveloperSkillsServiceImpl implements DeveloperSkillsService{
 			}
 		}
 		
-		Collections.sort(devSkills, (p1, p2) -> p1.getSkill().toLowerCase().compareTo(p2.getSkill().toLowerCase()));
+		Collections.sort(devSkills, (p1, p2) -> p1.getFuncional().toLowerCase().compareTo(p2.getFuncional().toLowerCase()));
 		return devSkills;
+	}
+
+	@Override
+	public DeveloperSkillsDto getDeveloperSkillsByFuncional(String funcional) {
+		ObjectMapper mapper = new ObjectMapper();
+
+		try {
+			DeveloperSkillsDto developerSkillsDto = mapper.readValue(new File(directory + funcional + ".json"), DeveloperSkillsDto.class);
+
+			return developerSkillsDto;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return null;
 	}
 
 }

@@ -1,34 +1,26 @@
 package com.mapa.skills.dto;
 
+import java.util.List;
+
+import com.mapa.skills.model.Notas;
+
 public class DeveloperSkillsDto {
 
-	private String nota;
-	private String skill;
-
-	public DeveloperSkillsDto() {
-
+	private String funcional;
+	public List<Notas> notas;
+	
+	public String getFuncional() {
+		return funcional;
+	}
+	public void setFuncional(String funcional) {
+		this.funcional = funcional;
+	}
+	public List<Notas> getNotas() {
+		return notas;
+	}
+	public void setNotas(List<Notas> notas) {
+		this.notas = notas;
 	}
 
-	public DeveloperSkillsDto(String nota, String skill) {
-		super();
-		this.nota = nota;
-		this.skill = skill;
-	}
-
-	public String getNota() {
-		return nota;
-	}
-
-	public void setNota(String nota) {
-		this.nota = nota;
-	}
-
-	public String getSkill() {
-		return skill;
-	}
-
-	public void setSkill(String skill) {
-		this.skill = skill;
-	}
-
+	
 }

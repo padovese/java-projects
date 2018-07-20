@@ -1,32 +1,25 @@
 package com.mapa.skills.model;
 
+import java.util.List;
+
 public class DeveloperSkills {
 
-	private String nota;
-	private String skill;
+	private String funcional;
+	List<Notas> notas;
 	
-	public DeveloperSkills() {
-		
+	public String getFuncional() {
+		return funcional;
+	}
+	public void setFuncional(String funcional) {
+		this.funcional = funcional;
+	}
+	public List<Notas> getNotas() {
+		return notas;
+	}
+	public void setNotas(List<Notas> notas) {
+		this.notas = notas;
 	}
 	
-	public DeveloperSkills(String nota, String skill) {
-		super();
-		this.nota = nota;
-		this.skill = skill;
-	}
-	
-	public String getNota() {
-		return nota;
-	}
-	public void setNota(String nota) {
-		this.nota = nota;
-	}
-	public String getSkill() {
-		return skill;
-	}
-	public void setSkill(String skill) {
-		this.skill = skill;
-	}
 	
 	
 }

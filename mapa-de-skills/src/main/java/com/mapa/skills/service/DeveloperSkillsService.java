@@ -12,5 +12,6 @@ public interface DeveloperSkillsService {
 
 	public void saveSkill(String skill);  //should be called when a new Skill is saved, to sync
 	public void saveSkillNote(String skill);
-	public List<DeveloperSkillsDto> getDeveloperSkills();
+	public DeveloperSkillsDto getDeveloperSkillsByFuncional(String funcional);
+	public List<DeveloperSkillsDto> getAllDeveloperSkills();
 }

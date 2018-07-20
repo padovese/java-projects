@@ -46,7 +46,7 @@ public class DevelopersController {
 		ModelAndView mv = new ModelAndView("developerPersonalPage");		
 		mv.addObject("developer", developerService.getDeveloperByFuncional(funcional));
 		
-		mv.addObject("skills", developerSkillsService.getDeveloperSkills());
+		mv.addObject("developerSkills", developerSkillsService.getDeveloperSkillsByFuncional(funcional));
 		
 		return mv;
 	}
