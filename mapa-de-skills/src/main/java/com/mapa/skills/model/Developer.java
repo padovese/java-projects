@@ -10,7 +10,7 @@ public class Developer {
 	private String nome;
 	private TipoRT RT;
 	private String squad;
-	List<DeveloperSkills> skills;
+	private List<Notas> notas;
 	
 	public int getFuncional() {
 		return funcional;
@@ -36,11 +36,11 @@ public class Developer {
 	public void setSquad(String squad) {
 		this.squad = squad;
 	}
-	public List<DeveloperSkills> getSkills() {
-		return skills;
+	public List<Notas> getNotas() {
+		return notas;
 	}
-	public void setSkills(List<DeveloperSkills> skills) {
-		this.skills = skills;
+	public void setNotas(List<Notas> notas) {
+		this.notas = notas;
 	}
 
 }
