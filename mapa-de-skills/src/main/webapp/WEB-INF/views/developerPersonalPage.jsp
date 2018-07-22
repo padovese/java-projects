@@ -42,7 +42,7 @@
 		<th>Nível de experiência</th>
 	</thead>
 	<tbody>
-		<c:forEach items="${developerSkills.notas }" var="developerSkill">
+		<c:forEach items="${developer.notas }" var="developerSkill">
 		<tr>
 			<td>${developerSkill.skill }</td>
 			<td>${developerSkill.nota }</td>

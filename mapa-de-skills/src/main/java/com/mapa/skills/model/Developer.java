@@ -6,16 +6,16 @@ import com.mapa.skills.utils.TipoRT;
 
 public class Developer {
 
-	private int funcional;
+	private String funcional;
 	private String nome;
 	private TipoRT RT;
 	private String squad;
 	private List<Notas> notas;
 	
-	public int getFuncional() {
+	public String getFuncional() {
 		return funcional;
 	}
-	public void setFuncional(int funcional) {
+	public void setFuncional(String funcional) {
 		this.funcional = funcional;
 	}
 	public String getNome() {

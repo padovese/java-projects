@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.mapa.skills.dto.DeveloperDto;
+import com.mapa.skills.mapper.DeveloperMapper;
+import com.mapa.skills.model.Developer;
 import com.mapa.skills.service.DeveloperService;
 import com.mapa.skills.service.DeveloperSkillsService;
 
@@ -43,10 +45,13 @@ public class DevelopersController {
 	
 	@RequestMapping(value="/{funcional}", method=RequestMethod.GET)
 	public ModelAndView personalPage(@PathVariable("funcional") String funcional) {
-		ModelAndView mv = new ModelAndView("developerPersonalPage");		
-		mv.addObject("developer", developerService.getDeveloperByFuncional(funcional));
+		ModelAndView mv = new ModelAndView("developerPersonalPage");
 		
-		mv.addObject("developerSkills", developerSkillsService.getDeveloperSkillsByFuncional(funcional));
+		Developer developer = new Developer();
+		DeveloperMapper.developerDtoToEntity(developerService.getDeveloperByFuncional(funcional), developer);
+		DeveloperMapper.developerSkillsDtoToEntity(developerSkillsService.getDeveloperSkillsByFuncional(funcional), developer);
+		
+		mv.addObject("developer", developer);
 		
 		return mv;
 	}
