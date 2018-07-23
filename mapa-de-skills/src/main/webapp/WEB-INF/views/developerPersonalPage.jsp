@@ -27,10 +27,10 @@
 
 <div id="devInfo">'
 	[foto do dev]<br>
-	<label class="bold">Funcional:</label> ${developer.funcional }<br>
-	<label class="bold">Nome:</label> ${developer.nome }<br>
-	<label class="bold">Squad:</label> ${developer.squad }<br>
-	<label class="bold">RT:</label> ${developer.RT }<br>
+	<label class="bold" name="funcional">Funcional:</label> ${developer.funcional }<br>
+	<label class="bold" name="nome">Nome:</label> ${developer.nome }<br>
+	<label class="bold" name="squad">Squad:</label> ${developer.squad }<br>
+	<label class="bold" name="RT">RT:</label> ${developer.RT }<br>
 	<label class="bold">Metas técnicas:</label> <br>
 </div>
 	
@@ -51,7 +51,10 @@
 		</c:forEach>
 	</tbody>
 </table>
-	
+
+<form action="${developer.funcional }/edit" method="post" class="form-inline">
+	<button type="submit" class="btn btn-default">Atualizar perfil</button>
+</form>
 
 <script src="/js/lib/Chart.min.js"></script>
 <script src="/js/app/graph.js"></script>
