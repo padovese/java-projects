@@ -1,6 +1,8 @@
 package com.mapa.skills.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,6 +27,8 @@ public class HomeController {
 		mv.addObject("totalFramework", getTotal(TipoSkill.FRAMEWORK));	
 		mv.addObject("totalFerramenta", getTotal(TipoSkill.FERRAMENTA));
 
+		usageOfHashMap();
+		
 		return mv;
 	}
 
@@ -37,6 +41,17 @@ public class HomeController {
 			}
 		}
 		return i;
+	}
+	
+	private void usageOfHashMap() {
+		HashMap<String, Boolean> hm = new HashMap<String, Boolean>();
+		hm.put("someRule", true);
+		hm.put("anotherRule", false);
+		hm.put("lastRule", false);
+		
+		for(Map.Entry m : hm.entrySet()) {
+			System.out.println(m.getKey() + " " + m.getValue());
+		}
 	}
 	
 }
