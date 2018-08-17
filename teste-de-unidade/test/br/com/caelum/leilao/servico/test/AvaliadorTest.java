@@ -1,5 +1,9 @@
 package br.com.caelum.leilao.servico.test;
 
+import static org.junit.Assert.assertEquals;
+
+import java.util.List;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -32,16 +36,16 @@ public class AvaliadorTest {
 		double menorEsperado = 15000.0;
 		
 		//Parte 3: validacao
-		Assert.assertEquals(maiorEsperado, avaliador.getMaiorLance(), 0.00001); //ultimo parametro serve p desconsiderar arredondamentos
-		Assert.assertEquals(menorEsperado, avaliador.getMenorLance(), 0.00001);
+		assertEquals(maiorEsperado, avaliador.getMaiorLance(), 0.00001); //ultimo parametro serve p desconsiderar arredondamentos
+		assertEquals(menorEsperado, avaliador.getMenorLance(), 0.00001);
 	}
 	
 	@Test
 	public void testaValorInicialDosAtributos() {
 		Avaliador leioleiro = new Avaliador();
 		
-		Assert.assertEquals(Double.NEGATIVE_INFINITY, leioleiro.getMaiorLance(), 0.00001);
-		Assert.assertEquals(Double.POSITIVE_INFINITY, leioleiro.getMenorLance(), 0.00001);
+		assertEquals(Double.NEGATIVE_INFINITY, leioleiro.getMaiorLance(), 0.00001);
+		assertEquals(Double.POSITIVE_INFINITY, leioleiro.getMenorLance(), 0.00001);
 		
 	}
 	
@@ -67,5 +71,43 @@ public class AvaliadorTest {
 				double totalEsperado = 18666.66;
 				
 				Assert.assertEquals(totalEsperado, avaliador.getValorTotal(), 0.01);
+	}
+	
+	@Test
+	public void testaLanceUnico() {
+		Usuario fulano = new Usuario("Fulano");
+		
+		Leilao leilao = new Leilao("cioccolato");
+		leilao.propoe(new Lance(fulano, 10.5));
+		
+		Avaliador avaliador = new Avaliador();
+		avaliador.avalia(leilao);
+
+		assertEquals(10.5, avaliador.getMenorLance(), 0.00001);
+		assertEquals(10.5, avaliador.getMaiorLance(), 0.00001);
+		
+	}
+	
+	@Test
+	public void deveEncontrarOsTresMaioresLances() {
+		Usuario maria = new Usuario("Maria");
+		Usuario joao = new Usuario("Joao");
+		Usuario pedro = new Usuario("Pedro");
+		
+		Leilao leilao = new Leilao("Mazda");
+		
+		leilao.propoe(new Lance(pedro, 15000.0));
+		leilao.propoe(new Lance(maria, 17000.0));
+		leilao.propoe(new Lance(joao, 24000.0));
+		leilao.propoe(new Lance(maria, 16000.0));
+		
+		Avaliador avaliador = new Avaliador();
+		avaliador.avalia(leilao);
+		
+		List<Lance> maiores = avaliador.getMaiores();
+		assertEquals(3, maiores.size());
+		assertEquals(24000.0, maiores.get(0).getValor(), 0.0001);
+		assertEquals(17000.0, maiores.get(1).getValor(), 0.0001);
+		assertEquals(16000.0, maiores.get(2).getValor(), 0.0001);
 	}
 }
