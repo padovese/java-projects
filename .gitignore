@@ -51,6 +51,9 @@ Temporary Items
 .recommenders
 *.iml
 *.class
+*.classpath
+*.project
+*.settings
 
 # ignore an entire directory
 /doc/
