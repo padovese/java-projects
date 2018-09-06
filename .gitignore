@@ -58,5 +58,5 @@ Temporary Items
 # ignore an entire directory
 /doc/
 /.recommenders/
-
+/target/
 .idea/
