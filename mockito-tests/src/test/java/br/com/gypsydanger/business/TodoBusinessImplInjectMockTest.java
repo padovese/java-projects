@@ -15,25 +15,15 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
 
 import br.com.gypsydanger.data.api.TodoService;
 
+public class TodoBusinessImplInjectMockTest {
 
-@RunWith(MockitoJUnitRunner.class)
-public class TodoBusinessImplMockTest {
-
-	@Mock
-	TodoService todoService;
-	
-	@InjectMocks
-	TodoBusinessImpl todoBusinessImpl;
-	
 	@Test
 	public void testRetrieveTodosRelatedToSpring_usingMock() {
+		TodoService todoService = mock(TodoService.class);
+		TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoService);
 
 		when(todoService.retrieveTodos("dummy"))
 				.thenReturn(Arrays.asList("Learn Spring MVC", "Learn Spring", "Learn to Dance"));
@@ -44,6 +34,8 @@ public class TodoBusinessImplMockTest {
 
 	@Test
 	public void testRetrieveTodosRelatedToSpring_usingMockAsEmptyList() {
+		TodoService todoService = mock(TodoService.class);
+		TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoService);
 
 		List<String> todos = Arrays.asList();
 
@@ -56,6 +48,8 @@ public class TodoBusinessImplMockTest {
 	@Test
 	public void testRetrieveTodosRelatedToSpring_usingMockAsEmptyList_usingBDD() {
 		//Given
+		TodoService todoService = mock(TodoService.class);
+		TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoService);
 
 		List<String> todos = Arrays.asList();
 
@@ -70,6 +64,8 @@ public class TodoBusinessImplMockTest {
 
 	@Test(expected = NullPointerException.class)
 	public void testRetrieveTodosRelatedToSpring_usingMockAsNull() {
+		TodoService todoService = mock(TodoService.class);
+		TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoService);
 
 		List<String> todos = null;
 
@@ -82,6 +78,8 @@ public class TodoBusinessImplMockTest {
 	@Test
 	public void testDeleteTodosNotRelatedToSpring_usingBDD() {
 		//Given
+		TodoService todoService = mock(TodoService.class);
+		TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoService);
 
 		List<String> todos = Arrays.asList("Learn Spring MVC", "Learn Spring", "Learn to Dance");
 
