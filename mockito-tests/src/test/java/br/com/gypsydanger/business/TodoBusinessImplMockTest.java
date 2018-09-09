@@ -94,5 +94,6 @@ public class TodoBusinessImplMockTest {
 		verify(todoService, never()).deleteTodo("Learn Spring MVC");
 		
 		verify(todoService, never()).deleteTodo("Learn Spring");
+		//then(todoService).should(never()).deleteTodo("learn Spring"); //BDD way
 	}
 }
