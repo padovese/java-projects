@@ -1,11 +1,14 @@
 package com.gypsydanger.rest.webservices.restfulwebservices.controller;
 
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.*;
 import java.net.URI;
 import java.util.List;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.Resource;
+import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,14 +34,20 @@ public class UserController {
 	}
 	
 	@GetMapping("/users/{id}")
-	public User getUser(@PathVariable int id){
+	public Resource<User> getUser(@PathVariable int id){
 		User user = userService.findOne(id);
 		
 		if(user == null) {
 			throw new UserNotFoundException("id: " + id);
 		}
 		
-		return user;
+		//Hateoas implementation
+		Resource<User> resource = new Resource<User>(user);
+		ControllerLinkBuilder linkTo = linkTo(methodOn(this.getClass()).getAllUsers());
+		
+		resource.add(linkTo.withRel("all-users"));
+		
+		return resource;
 	}
 	
 	@PostMapping("/users")
