@@ -9,6 +9,7 @@
 </head>
 <body>
     <input type="text" placeholder="Type your name" ng-model="name">
-    Hello, {{ name }}<span ng-if="name">.</span>
+    Hello<span ng-if="name">,</span>
+    {{ name }}<span ng-if="!name">...</span><span ng-if="name">.</span>
 </body>
 </html>
