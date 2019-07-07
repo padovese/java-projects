@@ -6,10 +6,29 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="/js/lib/angular.min.js"></script>
+
+	<style>
+		.new-class{
+			font-size: 100px;
+		}
+		.other-class{
+			font-size: 50px;	
+		}
+		.size{
+			font-size: {{ size }}px;
+		}
+	</style>
+
 </head>
+
 <body>
+	<h1 class="new-class" ng-class="{'other-class': name && name == 'Padovese'}">tryangular</h1>
+
     <input type="text" placeholder="Type your name" ng-model="name">
     Hello<span ng-if="name">,</span>
     {{ name }}<span ng-if="!name">...</span><span ng-if="name">.</span>
+    <hr>
+    <span class="size">My awesome text!</span><br>
+    <input type="text" ng-model="size" placeholder="Type the size">
 </body>
 </html>
