@@ -1,4 +1,10 @@
 <div>
 	{{ title }}
 	<button ng-click='someClickTest()'>Click me!</button>
+	{{ blogs }}
+<hr>
+	<h1>Blog List</h1>
+	<ul>
+		<li ng-repeat="blog in blogs">ID: {{ blog.id }}, Title: {{ blog.name }}, Release Date: {{blog.releaseDate }}</li>
+	</ul>
 </div>
