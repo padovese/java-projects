@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('blogList').component('blogList', {
-	template: "<div>{{ title }}<button ng-click='someClickTest()'>Click me!</button></div>",
+	templateUrl: "/templates/blog-list.html",
 	controller: function($scope){
 		console.log("Hello");
 		$scope.title = 'Hi There';
