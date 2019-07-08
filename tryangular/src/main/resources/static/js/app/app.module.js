@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('tryangular', []);
+angular.module('tryangular', ['blogList']);

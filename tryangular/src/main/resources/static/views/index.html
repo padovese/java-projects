@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="/js/lib/angular.min.js"></script>
-	<script src="/js/app/app.config.js"></script>
+<!--     <script src="/js/lib/angular.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	<script src="/js/app/app.module.js"></script>
+	<script src="/js/app/app.config.js"></script>
+	<script src="/js/app/blog-list/blog-list.module.js"></script>
+	<script src="/js/app/blog-list/blog-list.component.js"></script>
 
 	<style>
 		.new-class{
@@ -32,5 +35,7 @@
     <hr>
     <span class="size">My awesome text!</span><br>
     <input type="text" ng-model="size" placeholder="Type the size">
+    <hr>
+	<blog-list></blog-list>
 </body>
 </html>
