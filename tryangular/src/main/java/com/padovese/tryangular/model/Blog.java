@@ -6,16 +6,28 @@ public class Blog {
 
 	private int id;
 	private String name;
+	private LocalDate releaseDate;
+	private String description;
 	
-	public Blog(int id, String name, LocalDate releaseDate) {
+	public Blog(int id, String name, LocalDate releaseDate, String description) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.releaseDate = releaseDate;
+		this.description = description;
 	}
-	
-	private LocalDate releaseDate;
-	
+
+
+	public String getDescription() {
+		return description;
+	}
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
 	public int getId() {
 		return id;
 	}

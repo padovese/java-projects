@@ -5,6 +5,6 @@
 <hr>
 	<h1>Blog List</h1>
 	<ul>
-		<li ng-repeat="blog in blogs">ID: {{ blog.id }}, Title: {{ blog.name }}, Release Date: {{blog.releaseDate }}</li>
+		<li ng-repeat="blog in blogs"><a href="/blog/{{ blog.id }}">ID: {{ blog.id }}</a>, Title: {{ blog.name }}, Release Date: {{blog.releaseDate }}</li>
 	</ul>
 </div>

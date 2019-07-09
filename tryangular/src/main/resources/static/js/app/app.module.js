@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('tryangular', ['blogList']);
+angular.module('tryangular', ['ngResource', 'ngRoute', 'blogList', 'blogDetails']);
