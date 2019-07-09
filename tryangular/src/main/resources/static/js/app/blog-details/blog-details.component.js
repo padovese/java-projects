@@ -2,7 +2,6 @@
 
 angular.module('blogDetails').component('blogDetails', {
 	templateUrl: "/templates/blog-details.html",
-	bindings: {id: '@'},
 	controller: function($scope, $http, $routeParams){
 		
 		$http({

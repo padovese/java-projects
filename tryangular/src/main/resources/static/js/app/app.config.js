@@ -13,6 +13,12 @@ angular.module('tryangular').
 		}).
 		when("/blog/:id", {
 			template: "<blog-details></blog-details>"
+		}).
+		when("/about", {
+			templateUrl: "/templates/about.html"
+		}).
+		otherwise({
+			template: "Page not Found."
 		})
 		
 	});
