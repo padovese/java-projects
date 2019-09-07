@@ -1,5 +1,5 @@
 <style>
-#graph{
+#graph{ 
 	width: 350px;
 	height: 350px;
 	display: inline-block;
@@ -27,7 +27,7 @@
 
 				
 				<br>
-				Por quê não criar sessão de dojo para postagem de treinamentos, e sessão de café da manhã e outras
+				Por quÃª nÃ£o criar sessÃ£o de dojo para postagem de treinamentos, e sessÃ£o de cafÃ© da manhÃ£ e outras
 				utilidades da horizontal como agenda?
 
 <br>
