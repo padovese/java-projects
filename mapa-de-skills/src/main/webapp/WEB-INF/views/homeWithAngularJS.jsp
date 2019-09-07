@@ -30,6 +30,11 @@
 				Por quê não criar sessão de dojo para postagem de treinamentos, e sessão de café da manhã e outras
 				utilidades da horizontal como agenda?
 
+<br>
+<div ng-app="wineApp">
+<div ng-controller="updateController">{{name}} {{1+2}}</div>
+</div>
+
 <script src="/js/lib/Chart.min.js"></script>
 <script src="/js/app/graph.js"></script>
 <script>
@@ -41,5 +46,14 @@ secondGraph();
 thirdGraph();
 </script>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+<script>
+let wineApp = angular.module('wineApp', []);
+
+wineApp.controller('updateController', function ($scope){
+	$scope.name = 'Padovese';
+});
+</script>
 
 <%@ include file="footer.jsp" %>
