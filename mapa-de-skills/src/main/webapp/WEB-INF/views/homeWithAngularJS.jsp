@@ -46,7 +46,7 @@ secondGraph();
 thirdGraph();
 </script>
 
-
+//Testar isso dentro de um docment.ready na NI
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
 <script>
 let wineApp = angular.module('wineApp', []);
